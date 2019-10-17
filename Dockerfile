@@ -22,9 +22,7 @@ ENV BUILD_PACKAGES="\
     APT_PACKAGES="\
     ca-certificates \
     openssl \
-    sqlite3 \
     bash \
-    graphviz \
     fonts-noto \
     libpng16-16 \
     libfreetype6 \
@@ -34,7 +32,6 @@ ENV BUILD_PACKAGES="\
     h5py \
     requests \
     pillow \
-    graphviz \
     numpy \
     pandas \
     scipy \
@@ -46,9 +43,7 @@ ENV BUILD_PACKAGES="\
     keras \
     nltk \
     tqdm \
-    pytest \
-    https://download.pytorch.org/whl/cpu/torch-1.1.0-cp36-cp36m-linux_x86_64.whl \
-    https://download.pytorch.org/whl/cpu/torchvision-0.3.0-cp36-cp36m-linux_x86_64.whl" \
+    pytest" \
     PYTHON_VER=3.6.8 \
     JUPYTER_CONFIG_DIR=/home/.ipython/profile_default/startup \
     LANG=C.UTF-8

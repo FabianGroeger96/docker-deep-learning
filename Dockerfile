@@ -22,6 +22,7 @@ ENV BUILD_PACKAGES="\
     APT_PACKAGES="\
     ca-certificates \
     openssl \
+    sqlite3 \
     bash \
     fonts-noto \
     libpng16-16 \

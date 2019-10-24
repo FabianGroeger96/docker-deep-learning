@@ -32,6 +32,8 @@ ENV BUILD_PACKAGES="\
     libxml2-dev \
     libxslt1-dev \
     python-dev \
+    libbz2-dev \
+    bzip2 \
     libgomp1" \
     PIP_PACKAGES="\
     h5py \

@@ -28,6 +28,10 @@ ENV BUILD_PACKAGES="\
     libpng16-16 \
     libfreetype6 \
     libjpeg62-turbo \
+    python3-lxml \
+    libxml2-dev \
+    libxslt1-dev \
+    python-dev \
     libgomp1" \
     PIP_PACKAGES="\
     h5py \
@@ -43,6 +47,7 @@ ENV BUILD_PACKAGES="\
     tensorflow \
     keras \
     nltk \
+    lxml \
     tqdm \
     pytest" \
     PYTHON_VER=3.6.8 \

@@ -34,6 +34,8 @@ ENV BUILD_PACKAGES="\
     python-dev \
     libbz2-dev \
     bzip2 \
+    python3-bs4 \
+    python-html5lib \
     libgomp1" \
     PIP_PACKAGES="\
     h5py \
@@ -51,6 +53,9 @@ ENV BUILD_PACKAGES="\
     nltk \
     lxml \
     tqdm \
+    beautifulsoup4 \
+    html5lib \
+    ipywidgets \
     pytest" \
     PYTHON_VER=3.6.8 \
     JUPYTER_CONFIG_DIR=/home/.ipython/profile_default/startup \
@@ -86,6 +91,7 @@ RUN set -ex; \
     find / -name __pycache__ | xargs rm -r; \
     rm -rf /root/.[acpw]*; \
     pip install jupyter && jupyter nbextension enable --py widgetsnbextension; \
+    jupyter labextension install @jupyter-widgets/jupyterlab-manager; \
     mkdir -p ${JUPYTER_CONFIG_DIR}; \
     echo "import warnings" | tee ${JUPYTER_CONFIG_DIR}/config.py; \
     echo "warnings.filterwarnings('ignore')" | tee -a ${JUPYTER_CONFIG_DIR}/config.py; \

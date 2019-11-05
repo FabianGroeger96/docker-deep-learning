@@ -36,8 +36,12 @@ ENV BUILD_PACKAGES="\
     bzip2 \
     python3-bs4 \
     python-html5lib \
+    liblzma-dev \
     libgomp1" \
     PIP_PACKAGES="\
+    pyyaml \
+    pymkl \
+    cffi \
     h5py \
     requests \
     pillow \
@@ -56,7 +60,17 @@ ENV BUILD_PACKAGES="\
     beautifulsoup4 \
     html5lib \
     ipywidgets \
-    pytest" \
+    pylzma \
+    jieba \
+    ipython \
+    chardet \
+    pytest \
+    spacy \
+    spacy-lookups-data \
+    jupyter \
+    jupyterlab \
+    xgboost \
+    mxnet-mkl" \
     PYTHON_VER=3.6.8 \
     JUPYTER_CONFIG_DIR=/home/.ipython/profile_default/startup \
     LANG=C.UTF-8
@@ -85,13 +99,10 @@ RUN set -ex; \
     apt-get autoremove; \
     rm -rf /tmp/* /var/tmp/*; \
     rm -rf /var/lib/apt/lists/*; \
-    rm -f /var/cache/apt/archives/*.deb \
-    /var/cache/apt/archives/partial/*.deb \
-    /var/cache/apt/*.bin; \
+    rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin; \
     find / -name __pycache__ | xargs rm -r; \
     rm -rf /root/.[acpw]*; \
     pip install jupyter && jupyter nbextension enable --py widgetsnbextension; \
-    jupyter labextension install @jupyter-widgets/jupyterlab-manager; \
     mkdir -p ${JUPYTER_CONFIG_DIR}; \
     echo "import warnings" | tee ${JUPYTER_CONFIG_DIR}/config.py; \
     echo "warnings.filterwarnings('ignore')" | tee -a ${JUPYTER_CONFIG_DIR}/config.py; \

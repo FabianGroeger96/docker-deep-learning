@@ -54,7 +54,6 @@ ENV BUILD_PACKAGES="\
     jupyter \
     tensorflow \
     keras \
-    nltk \
     lxml \
     tqdm \
     beautifulsoup4 \
@@ -70,7 +69,11 @@ ENV BUILD_PACKAGES="\
     jupyter \
     jupyterlab \
     xgboost \
-    mxnet-mkl" \
+    mxnet-mkl \
+    ipdb \
+    nltk \
+    jiwer \
+    treetaggerwrapper" \
     PYTHON_VER=3.6.8 \
     JUPYTER_CONFIG_DIR=/home/.ipython/profile_default/startup \
     LANG=C.UTF-8

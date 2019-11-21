@@ -52,7 +52,9 @@ ENV BUILD_PACKAGES="\
     seaborn \
     matplotlib \
     jupyter \
-    tensorflow \
+    tensorflow==1.12 \
+    tensorflow-gpu==1.12 \
+    tensorboard \
     keras \
     lxml \
     tqdm \
@@ -73,6 +75,7 @@ ENV BUILD_PACKAGES="\
     ipdb \
     nltk \
     jiwer \
+    gensim \
     treetaggerwrapper" \
     PYTHON_VER=3.6.8 \
     JUPYTER_CONFIG_DIR=/home/.ipython/profile_default/startup \

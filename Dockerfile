@@ -53,8 +53,7 @@ ENV BUILD_PACKAGES="\
     matplotlib \
     jupyter \
     tensorflow==1.12 \
-    tensorflow-gpu==1.12 \
-    tensorboard \
+    tensorboard==1.12 \
     keras \
     lxml \
     tqdm \

@@ -75,7 +75,8 @@ ENV BUILD_PACKAGES="\
     nltk \
     jiwer \
     gensim \
-    treetaggerwrapper" \
+    treetaggerwrapper \
+    pyfiglet" \
     PYTHON_VER=3.6.8 \
     JUPYTER_CONFIG_DIR=/home/.ipython/profile_default/startup \
     LANG=C.UTF-8
